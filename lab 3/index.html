@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="Zad3">wynik dodawanie</h2>
+    <h3 id="pole">pole wynosi: </h3>
+    <script>
+
+console.log("hello world")
+let a=10;
+let b=20;
+let c=23.2;
+let dodawanie=a+b+c;
+let odejmowanie=a-b-c;
+let mnozenie=a*b*c;
+let dzielenie=a/b/c;
+//alert("dodawanie "+dodawanie);
+//alert("odejmowanie "+odejmowanie);
+//alert("mnozenie "+mnozenie);
+//alert("dzielenie "+dzielenie)
+console.log(dodawanie)
+console.log(odejmowanie)
+console.log(mnozenie)
+console.log(dzielenie)
+document.getElementById("Zad3").innerHTML="Wynik dodawani to: "+dodawanie;
+for(let i=0;i<101; i+=2)
+{
+   // if(i%2==0)
+   // {
+        console.log(i)
+   // }
+}
+let dlugosc = parseFloat(prompt("podaj dlugosc boku"));
+let dlugosc1 = parseFloat(prompt("podaj dlugosc boku2"));
+let dlugosc2 = parseFloat(prompt("podaj dlugosc boku3"));
+if(dlugosc+dlugosc1>dlugosc2 && dlugosc2+dlugosc1>dlugosc && dlugosc+dlugosc2>dlugosc)
+{
+let p=(dlugosc+dlugosc1+dlugosc2)/2;
+let pole=Math.sqrt(p*(p-dlugosc)*(p-dlugosc1)*(p-dlugosc2))
+document.getElementById("pole").innerHTML="Pole to:  "+pole;
+}
+else{
+    document.getElementById("pole").innerHTML="to nie jest trójkąt byczku";
+
+}
+    </script>
+    
+</body>
+</html>

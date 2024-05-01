@@ -8,6 +8,7 @@
 <body>
     <h2 id="Zad3">wynik dodawanie</h2>
     <h3 id="pole">pole wynosi: </h3>
+    <h3 id="dodaniee">suma wynosi</h3>
     <script>
 
 console.log("hello world")
@@ -37,6 +38,9 @@ for(let i=0;i<101; i+=2)
 let dlugosc = parseFloat(prompt("podaj dlugosc boku"));
 let dlugosc1 = parseFloat(prompt("podaj dlugosc boku2"));
 let dlugosc2 = parseFloat(prompt("podaj dlugosc boku3"));
+let liczb1 = parseFloat(prompt("podaj 1 liczbe do dodawania"));
+let liczb2 = parseFloat(prompt("Podaj 2 liczbe do dodawania"));
+
 if(dlugosc+dlugosc1>dlugosc2 && dlugosc2+dlugosc1>dlugosc && dlugosc+dlugosc2>dlugosc)
 {
 let p=(dlugosc+dlugosc1+dlugosc2)/2;
@@ -47,6 +51,12 @@ else{
     document.getElementById("pole").innerHTML="to nie jest trójkąt byczku";
 
 }
+let imie= String(prompt("Podaj swoje imie"));
+console.alert(imie);
+
+suma=liczb1+liczb2;
+document.getElementById("dodaniee").innerHTML=suma
+
     </script>
     
 </body>

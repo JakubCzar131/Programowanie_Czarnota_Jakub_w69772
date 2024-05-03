@@ -9,8 +9,8 @@
     <h2 id="Zad3">wynik dodawanie</h2>
     <h3 id="pole">pole wynosi: </h3>
     <h3 id="dodaniee">suma wynosi</h3>
+    <h3 id="największa"> największa to: </h3>
     <script>
-
 console.log("hello world")
 let a=10;
 let b=20;
@@ -35,12 +35,16 @@ for(let i=0;i<101; i+=2)
         console.log(i)
    // }
 }
-let dlugosc = parseFloat(prompt("podaj dlugosc boku"));
-let dlugosc1 = parseFloat(prompt("podaj dlugosc boku2"));
-let dlugosc2 = parseFloat(prompt("podaj dlugosc boku3"));
+//let dlugosc = parseFloat(prompt("podaj dlugosc boku"));
+//let dlugosc1 = parseFloat(prompt("podaj dlugosc boku2"));
+//let dlugosc2 = parseFloat(prompt("podaj dlugosc boku3"));
 let liczb1 = parseFloat(prompt("podaj 1 liczbe do dodawania"));
 let liczb2 = parseFloat(prompt("Podaj 2 liczbe do dodawania"));
-
+let liczba1 = prompt("Podaj pierwszą liczbę: ");
+let liczba2 = prompt("Podaj drugą liczbę: ");
+let liczba3 = prompt("Podaj trzecią liczbę: ");
+let licz1nwd = parseFloat(prompt("Podaj pierwszą liczbę: "));
+let licz2nwd = parseFloat(prompt("Podaj drugą liczbę: "));
 if(dlugosc+dlugosc1>dlugosc2 && dlugosc2+dlugosc1>dlugosc && dlugosc+dlugosc2>dlugosc)
 {
 let p=(dlugosc+dlugosc1+dlugosc2)/2;
@@ -52,10 +56,39 @@ else{
 
 }
 let imie= String(prompt("Podaj swoje imie"));
-console.alert(imie);
+alert(imie);
 
 suma=liczb1+liczb2;
-document.getElementById("dodaniee").innerHTML=suma
+document.getElementById("dodaniee").innerHTML="wynik dodawania to"+suma;
+
+let bigger = liczba1; //największa z trzech 
+
+if (liczba2 > bigger) {
+  bigger = liczba2;
+}
+
+if (liczba3 > bigger) {
+  bigger = liczba3;
+}
+
+console.log("Największa liczba to:", bigger);
+największa = document.getElementById("wynik-kontener");
+document.getElementById("największa").innerHTML=bigger;
+
+
+
+let l1 = licz1nwd; //nwd
+let l2 = licz2nwd;
+
+while (l2 != 0) {
+  let temp = l2;
+  b = l1 % l2;
+  l1 = temp;
+}
+
+let nwd = l1;
+
+console.log("Największy wspólny dzielnik to:", nwd);
 
     </script>
     

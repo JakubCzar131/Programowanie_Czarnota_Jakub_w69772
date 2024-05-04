@@ -6,11 +6,75 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 id="Zad3">wynik dodawanie</h2>
+    <!-- <h2 id="Zad3">wynik dodawanie</h2>
     <h3 id="pole">pole wynosi: </h3>
     <h3 id="dodaniee">suma wynosi</h3>
-    <h3 id="największa"> największa to: </h3>
-    <script>
+    <h3 id="największa"> największa to: </h3> -->
+    
+      <input type="text" id="dodawanie" name="dodawanie">
+    
+    <button onclick="dodawaniedolisty()">Dodaj do listy</button>
+    <button onclick="znikam()"> Kliknij</button>
+    <p id="hidden">giten morgen</p>
+
+    <script>  
+     function silnia(n)
+     {
+      if((n==0) || (n==1)) {return 1}
+    
+      else {return n*silnia(n-1) 
+     }
+    }
+console.log(silnia(5))
+function pelnoletni(wiek)
+{
+  if(wiek<18)
+  {
+    window.open("https://www.gry.pl");
+  }
+}
+
+let wiekt = parseFloat(prompt("podaj swój wiek:"));
+pelnoletni(wiekt);
+function znikam() {
+  var x = document.getElementById("hidden");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+var lista = [];
+
+function dodawaniedolisty() {
+  var x = document.getElementById("dodawanie").value;
+  lista.push(x);
+
+console.log(lista)}
+
+
+
+
+
+
+
+
+     let k=10;  
+ for(let i=10;i>=0;i--);1
+// {
+
+//   console.log(i);
+// }
+
+// while(k==0)
+//      {
+//       console.log(k)
+//       --k;
+//      }
+
+
+    </script>
+<!--<script>
 console.log("hello world")
 let a=10;
 let b=20;
@@ -90,7 +154,7 @@ let nwd = l1;
 
 console.log("Największy wspólny dzielnik to:", nwd);
 
-    </script>
+    </script> -->
     
 </body>
 </html>

@@ -6,18 +6,26 @@
     <title>Document</title>
 </head>
 <body>
+  <h2 id="liczby_losowe">Losowe</h2>
+  <h2 id="suma_losowe">suma:</h2>
+  <H2 id="parzyste">Parzyste:</H2>
+  <H2 id="pomnozone">pomnozone*3:</H2>
+  <H2 id="index">index numeru albumu:</H2>
+
+
+
+
+
     <!-- <h2 id="Zad3">wynik dodawanie</h2>
     <h3 id="pole">pole wynosi: </h3>
     <h3 id="dodaniee">suma wynosi</h3>
     <h3 id="największa"> największa to: </h3> -->
     
-      <input type="text" id="dodawanie" name="dodawanie">
+      <!-- <input type="text" id="dodawanie" name="dodawanie">
     
     <button onclick="dodawaniedolisty()">Dodaj do listy</button>
     <button onclick="znikam()"> Kliknij</button>
     <p id="hidden">giten morgen</p>
-
-    <script>  
      function silnia(n)
      {
       if((n==0) || (n==1)) {return 1}
@@ -60,20 +68,83 @@ console.log(lista)}
 
 
      let k=10;  
- for(let i=10;i>=0;i--);1
-// {
+ for(let i=10;i>=0;i--);1 -->
+ <!-- {
 
-//   console.log(i);
-// }
+   console.log(i);
+ }
 
-// while(k==0)
-//      {
-//       console.log(k)
-//       --k;
-//      }
+ while(k==0)
+      {
+       console.log(k)
+       --k;
+     } -->
+
+<script>
+let tab =[];
+let pomocnicza=0;
+for(let i=0;i<=10;i++)
+{
+  let x=parseInt(prompt("Podaj liczbę w tablicy"))
+  tab.push(x)
+}
+console.log(tab);
+let c=parseInt(prompt("Podaj liczbę całkowitą"))
+for(let i=0;i<=10;i++){
+if(tab[i]==c){
+pomocnicza++;
+}
+}
+console.log(pomocnicza)
+
+let tab_losowe=[];
+let parzyste=[];
+let suma=0;
+let pomnozona=[];
+
+for(let i=0;i<=10;i++)
+{
+  let losowa=Math.floor(Math.random()*100+1);
+  tab_losowe.push(losowa)
+}
+document.getElementById("liczby_losowe").innerHTML="Losowe to: "+tab_losowe;
+tab_losowe.push(69772)
+console.log(tab_losowe.indexOf(69772));
+for(let i=0;i<=10;i++)
+{
+suma=suma+tab_losowe[i];
+}
+document.getElementById("suma_losowe").innerHTML="Suma to: "+suma;
+
+for(let i=0;i<=10;i++)
+{
+if(tab_losowe[i]%2==0)
+{
+parzyste.push(tab_losowe[i])
+}
+}
+document.getElementById("parzyste").innerHTML="pazyste to: "+parzyste;
+for(let i=0;i<=10;i++)
+{
+pomnozona[i]=tab_losowe[i]*3
+}
+document.getElementById("pomnozone").innerHTML="pomnozone to: "+pomnozona;
 
 
-    </script>
+
+document.getElementById("index").innerHTML="index numeru albumu to: "+tab_losowe.indexOf(69772);
+
+let srednia=suma/tab_losowe.length;
+console.log(srednia);
+
+
+
+
+
+
+</script>
+
+    
 <!--<script>
 console.log("hello world")
 let a=10;

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  
+    </style>
+</head>
+<body>
+ 
+  <h2 id="liczby_losowe">Losowe</h2>
+  <h2 id="suma_losowe">suma:</h2>
+  <H2 id="parzyste">Parzyste:</H2>
+  <H2 id="pomnozone">pomnozone*3:</H2>
+  <H2 id="index">index numeru albumu:</H2>
+
+
+
+
+
+   <script>
+    function sumaDwochNajwiekszych(tablica) {
+  
+  if (tablica.length < 2) {
+      return "Tablica musi zawierać co najmniej dwie liczby.";
+  }
+
+  var posortowanaTablica = tablica.sort(function(a, b) {
+      return b - a;
+  });
+
+  return posortowanaTablica[0] + posortowanaTablica[1];
+}
+
+    function fibonacci(n) {
+    var fib = [0, 1]; 
+    for (var i = 2; i < n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    return fib;
+}
+
+var fib100 = fibonacci(100);
+
+console.log(fib100);
+    function odwrocCiąg(ciag) {
+    return ciag.split('').reverse().join('');
+}
+var ciagWejsciowy = prompt("Podaj ciąg znaków do odwrócenia:");
+
+var odwroconyCiąg = odwrocCiąg(ciagWejsciowy);
+
+console.log("Odwrocony ciąg: " + odwroconyCiąg);
+
+
+
+let tab =[];
+let pomocnicza=0;
+for(let i=0;i<=10;i++)
+{
+  let x=parseInt(prompt("Podaj liczbę w tablicy"))
+  tab.push(x)
+}
+console.log(tab);
+let c=parseInt(prompt("Podaj liczbę całkowitą"))
+for(let i=0;i<=10;i++){
+if(tab[i]==c){
+pomocnicza++;
+}
+}
+console.log(pomocnicza)
+
+let tab_losowe=[];
+let parzyste=[];
+let suma=0;
+let pomnozona=[];
+
+for(let i=0;i<=10;i++)
+{
+  let losowa=Math.floor(Math.random()*100+1);
+  tab_losowe.push(losowa)
+}
+document.getElementById("liczby_losowe").innerHTML="Losowe to: "+tab_losowe;
+tab_losowe.push(69772)
+console.log(tab_losowe.indexOf(69772));
+for(let i=0;i<=10;i++)
+{
+suma=suma+tab_losowe[i];
+}
+document.getElementById("suma_losowe").innerHTML="Suma to: "+suma;
+
+for(let i=0;i<=10;i++)
+{
+if(tab_losowe[i]%2==0)
+{
+parzyste.push(tab_losowe[i])
+}
+}
+document.getElementById("parzyste").innerHTML="pazyste to: "+parzyste;
+for(let i=0;i<=10;i++)
+{
+pomnozona[i]=tab_losowe[i]*3
+}
+document.getElementById("pomnozone").innerHTML="pomnozone to: "+pomnozona;
+
+
+
+document.getElementById("index").innerHTML="index numeru albumu to: "+tab_losowe.indexOf(69772);
+
+let srednia=suma/tab_losowe.length;
+console.log(srednia);
+
+
+var tablica = [1, 2, 3, 4, 5, 6];
+
+var nowaLiczba = parseInt(prompt("Podaj liczbę całkowitą:"));
+
+
+    var indeks = parseInt(prompt("Podaj indeks"));
+
+    
+
+        for (var i = tablica.length - 1; i >= indeks; i--) {
+            tablica[i + 1] = tablica[i];
+        }
+
+        tablica[indeks] = nowaLiczba;
+
+        console.log("Nowa tablica: " + tablica.join(", "));
+    
+        
+        console.log(sumaDwochNajwiekszych(tablica))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

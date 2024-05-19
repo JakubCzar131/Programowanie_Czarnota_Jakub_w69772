@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .przycisk {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        .aktywny {
+            background-color: yellow; /* Kolor tła dla aktywnego przycisku */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="znikam()"> Kliknij</button>
+    <p id="hidden">znikam :)</p>
+    <button class="przycisk">Przycisk 1</button>
+    <button class="przycisk">Przycisk 2</button>
+    <button class="przycisk">Przycisk 3</button>
+    <input type="text" id="dodawanie" name="dodawanie"> </br>
+    <button onclick="dodawaniedolisty()">Dodaj do listy</button>
+    <button onclick="znikam()"> Kliknij</button>
+
+    <input type="text" id="imie" placeholder="Imię">
+    <input type="text" id="nazwisko" placeholder="Nazwisko">
+    <button onclick="dodajDoTabeli()">Dodaj do tabeli</button>
+    
+    <table id="tabela">
+      <thead>
+        <tr>
+          <th>Imię</th>
+          <th>Nazwisko</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+    <h2>Konwerter temperatury</h2>
+    <input type="text" id="temperatura" placeholder="Wpisz temperaturę">
+    <button onclick="konwertuj()">Konwertuj</button>
+    <div id="wynik"></div>
+    <script>
+function konwertuj() {
+        var temperaturaInput = document.getElementById("temperatura").value;
+        var temperatura = parseFloat(temperaturaInput);
+
+        if (!isNaN(temperatura)) {
+            var wynik = document.getElementById("wynik");
+            var temperaturaFahrenheit = (temperatura * 9 / 5) + 32;
+            wynik.innerHTML = temperatura + " stopni Celsjusza to " + temperaturaFahrenheit.toFixed(2) + " stopni Fahrenheita.";
+            
+            var temperaturaCelsjusza = (temperaturaFahrenheit - 32) * 5 / 9;
+
+            wynik.innerHTML += "<br>" + temperaturaFahrenheit.toFixed(2) + " stopni Fahrenheita to " + temperaturaCelsjusza.toFixed(2) + " stopni Celsjusza.";
+        } else {
+            alert("Wprowadź poprawną liczbę.");
+        }
+    }
+        let lista=[];
+       function dodawaniedolisty() {
+  var x = document.getElementById("dodawanie").value;
+  lista.push(x);
+
+console.log(lista)}
+
+       function silnia(n) {
+    if (n < 0) {
+        return 0;
+    }
+    if (n === 0 || n === 1) {
+        return 1; 
+    }
+    return n * silnia(n - 1);
+}
+
+console.log("silnia wynosi " +silnia(3));
+function pelnoletni(wiek)
+{
+  if(wiek<18)
+  {
+    window.open("https://www.gry.pl");
+  }
+}
+function znikam() {
+  var x = document.getElementById("hidden");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function dodajDoTabeli() {
+        
+        var imie = document.getElementById("imie").value;
+        var nazwisko = document.getElementById("nazwisko").value;
+
+    
+        var tabela = document.getElementById("tabela").getElementsByTagName('tbody')[0];
+
+        var nowyWiersz = tabela.insertRow();
+        var komorkaImienia = nowyWiersz.insertCell(0);
+        var komorkaNazwiska = nowyWiersz.insertCell(1);
+
+        komorkaImienia.innerHTML = imie;
+        komorkaNazwiska.innerHTML = nazwisko;
+
+        document.getElementById("imie").value = "";
+        document.getElementById("nazwisko").value = "";
+    }
+let wiekt = parseFloat(prompt("podaj swój wiek:"));
+pelnoletni(wiekt);
+
+
+
+        for (let i = 10; i > 0; i--) {
+            console.log(i);
+        }
+        console.log("Wesołego nowego roku!");
+
+        let j = 10;
+        while (j > 0) {
+            console.log(j);
+            j--;
+        }
+        console.log("Wesołego nowego roku!");
+
+    </script>
+
+</body>
+</html>

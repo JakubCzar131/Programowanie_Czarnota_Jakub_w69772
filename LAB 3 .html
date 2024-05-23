@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="Zad3">Wynik dodawania</h2>
+    <h3 id="pole">Pole wynosi: </h3>
+    <h3 id="dodaniee">Suma wynosi: </h3>
+    <h3 id="najwieksza">Największa liczba to: </h3>
+    <h3 id="nwd">Największy wspólny dzielnik: </h3>
+
+    <script>
+        // Zadanie 2
+        alert("Hello World!");
+
+        // Zadanie 3
+        let a = 10, b = 20, c = 23.2;
+        let dodawanie = a + b + c;
+        let odejmowanie = a - b - c;
+        let mnozenie = a * b * c;
+        let dzielenie = a / b / c;
+
+        alert("Dodawanie: " + dodawanie);
+        alert("Odejmowanie: " + odejmowanie);
+        alert("Mnożenie: " + mnozenie);
+        alert("Dzielenie: " + dzielenie);
+
+        console.log("Dodawanie: " + dodawanie);
+        console.log("Odejmowanie: " + odejmowanie);
+        console.log("Mnożenie: " + mnozenie);
+        console.log("Dzielenie: " + dzielenie);
+
+        document.getElementById("Zad3").innerHTML = "Wynik dodawania to: " + dodawanie;
+
+        // Zadanie 4
+        for (let i = 0; i <= 100; i += 2) {
+            console.log(i);
+        }
+
+        // Zadanie 5
+        let dlugosc = parseFloat(prompt("Podaj długość boku a:"));
+        let dlugosc1 = parseFloat(prompt("Podaj długość boku b:"));
+        let dlugosc2 = parseFloat(prompt("Podaj długość boku c:"));
+
+        if (dlugosc + dlugosc1 > dlugosc2 && dlugosc + dlugosc2 > dlugosc1 && dlugosc1 + dlugosc2 > dlugosc) {
+            let p = (dlugosc + dlugosc1 + dlugosc2) / 2;
+            let pole = Math.sqrt(p * (p - dlugosc) * (p - dlugosc1) * (p - dlugosc2));
+            console.log("Pole wynosi: " + pole);
+            document.getElementById("pole").innerHTML = "Pole wynosi: " + pole;
+        } else {
+            console.log("Podane długości boków nie tworzą trójkąta.");
+            document.getElementById("pole").innerHTML = "Podane długości boków nie tworzą trójkąta.";
+        }
+
+        // Zadanie 6
+        let imie = prompt("Podaj swoje imię:");
+        alert("Witaj, " + imie + "!");
+
+        // Zadanie 7
+        let liczba1 = parseFloat(prompt("Podaj pierwszą liczbę do dodawania:"));
+        let liczba2 = parseFloat(prompt("Podaj drugą liczbę do dodawania:"));
+        let suma = liczba1 + liczba2;
+        console.log("Suma wynosi: " + suma);
+        document.getElementById("dodaniee").innerHTML = "Suma wynosi: " + suma;
+
+        // Zadanie 8
+        let num1 = parseFloat(prompt("Podaj pierwszą liczbę:"));
+        let num2 = parseFloat(prompt("Podaj drugą liczbę:"));
+        let num3 = parseFloat(prompt("Podaj trzecią liczbę:"));
+
+        let najwieksza = Math.max(num1, num2, num3);
+        console.log("Największa liczba to: " + najwieksza);
+        document.getElementById("najwieksza").innerHTML = "Największa liczba to: " + najwieksza;
+
+        // Zadanie 9
+        let licz1 = parseInt(prompt("Podaj pierwszą liczbę dla NWD:"));
+        let licz2 = parseInt(prompt("Podaj drugą liczbę dla NWD:"));
+
+        function najwiekszy_wsp_dziel(x, y) {
+            while (y !== 0) {
+                let temp = y;
+                y = x % y;
+                x = temp;
+            }
+            return x;
+        }
+
+        let nwd = najwiekszy_wsp_dziel(licz1, licz2);
+        console.log("Największy wspólny dzielnik to: " + nwd);
+        document.getElementById("nwd").innerHTML = "Największy wspólny dzielnik: " + nwd;
+    </script>
+</body>
+</html>
